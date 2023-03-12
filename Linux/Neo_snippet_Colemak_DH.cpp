@@ -79,11 +79,11 @@ xkb_symbols "neo_base" {
     key <AC04> { [ t,                       T,                       bracketright,            Greek_tau,               Right,                   Right,                   partialderivative,       NoSymbol                 ] };
     key <AC05> { [ g,                       G,                       U210A,                   Greek_gamma,             End,                     End,                     Greek_PSI,               NoSymbol                 ] };
 
-    key <AC06> { [ m,                       M,                       U2133,                   Greek_mu,                dead_diaeresis,          NoSymbol,                U204A,                   NoSymbol                 ] };
+    key <AC06> { [ m,                       M,                       U2133,                   Greek_mu,                dead_abovering,          NoSymbol,                U204A,                   NoSymbol                 ] };
     key <AC07> { [ n,                       N,                       parenleft,               Greek_nu,                KP_4,                    U2463,                   U2115,                   NoSymbol                 ] };
     key <AC08> { [ e,                       E,                       parenright,              Greek_epsilon,           KP_5,                    U2464,                   uparrow,                 NoSymbol                 ] };
     key <AC09> { [ i,                       I,                       exclam,                  Greek_iota,              KP_6,                    U2465,                   integral,                NoSymbol                 ] };
-    key <AC10> { [ o,                       O,                       at,                      Greek_omicron,           KP_0,                    U24EA,                   elementof,               NoSymbol                 ] };
+    key <AC10> { [ o,                       O,                       at,                      Greek_omicron,           dead_diaeresis,          U24EA,                   elementof,               NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
     key <AC11> { [ semicolon,               colon,                   numbersign,              U205D,                   U205A,                   KP_Decimal,              union,                   NoSymbol                 ] };
 
@@ -101,7 +101,7 @@ xkb_symbols "neo_base" {
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
     key <AB08> { [ comma,                   less,                    dollar,                  U03F1,                   KP_2,                    U2461,                   downarrow,               NoSymbol                 ] };
     key <AB09> { [ period,                  greater,                 percent,                 U03D1,                   KP_3,                    U2462,                   rightarrow,              NoSymbol                 ] };
-    key <AB10> { [ slash,                   question,                asciicircum,             U2011,                   dead_abovering,          U204F,                   U21CC,                   NoSymbol                 ] };
+    key <AB10> { [ slash,                   question,                asciicircum,             U2011,                   KP_0,                    U204F,                   U21CC,                   NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
 
     // Space key
