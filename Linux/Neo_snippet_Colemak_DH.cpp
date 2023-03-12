@@ -82,8 +82,8 @@ xkb_symbols "neo_base" {
     key <AC06> { [ m,                       M,                       U2133,                   Greek_mu,                dead_abovering,          NoSymbol,                U204A,                   NoSymbol                 ] };
     key <AC07> { [ n,                       N,                       parenleft,               Greek_nu,                KP_4,                    U2463,                   U2115,                   NoSymbol                 ] };
     key <AC08> { [ e,                       E,                       parenright,              Greek_epsilon,           KP_5,                    U2464,                   uparrow,                 NoSymbol                 ] };
-    key <AC09> { [ i,                       I,                       exclam,                  Greek_iota,              KP_6,                    U2465,                   integral,                NoSymbol                 ] };
-    key <AC10> { [ o,                       O,                       at,                      Greek_omicron,           dead_diaeresis,          U24EA,                   elementof,               NoSymbol                 ] };
+    key <AC09> { [ i,                       I,                       exclam,                  Greek_iota,              dead_diaeresis,          U2465,                   integral,                NoSymbol                 ] };
+    key <AC10> { [ o,                       O,                       at,                      Greek_omicron,           KP_6,                    U24EA,                   elementof,               NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
     key <AC11> { [ semicolon,               colon,                   numbersign,              U205D,                   U205A,                   KP_Decimal,              union,                   NoSymbol                 ] };
 
