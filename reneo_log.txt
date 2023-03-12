@@ -1,0 +1,30 @@
+2023-01-06 11:55:39.265 Starting ReNeo...
+2023-01-06 11:55:39.266 WARNING: File logging enabled, make sure you know what you're doing!
+2023-01-06 11:55:39.266 Initializing keysyms from D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\keysymdef.h
+2023-01-06 11:55:41.865 Initializing compose
+2023-01-06 11:55:41.866 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\base.remove
+2023-01-06 11:55:41.867 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\cyrillic.remove
+2023-01-06 11:55:41.867 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\diacritics.remove
+2023-01-06 11:55:41.868 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\greek-oxia.remove
+2023-01-06 11:55:41.869 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\greek.remove
+2023-01-06 11:55:41.869 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\lang.remove
+2023-01-06 11:55:41.870 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\math-font.remove
+2023-01-06 11:55:41.870 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\math.remove
+2023-01-06 11:55:41.870 Removing compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\unicode.remove
+2023-01-06 11:55:41.871 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\base.module
+2023-01-06 11:55:41.874 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\cyrillic.module
+2023-01-06 11:55:41.875 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\diacritics.module
+2023-01-06 11:55:41.875 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\en_US.module
+2023-01-06 11:55:41.906 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\greek-oxia.module
+2023-01-06 11:55:41.906 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\greek.module
+2023-01-06 11:55:41.911 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\klingon-kp.module
+2023-01-06 11:55:41.965 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\klingon.module
+2023-01-06 11:55:42.017 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\lang.module
+2023-01-06 11:55:42.020 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\math-font.module
+2023-01-06 11:55:42.023 Loading compose module D:\6110110391\ReNeo-Neo-Colemak-DH-EuroSign-edition\compose\math.module
+2023-01-06 11:55:42.030 Time spent reading and parsing module files: 164 ms
+2023-01-06 11:55:42.030 Loaded 24989 compose sequences.
+2023-01-06 11:55:42.081 Keysym medium_white_star not found.
+2023-01-06 11:55:42.082 Keysym euro not found.
+2023-01-06 11:55:42.082 Keysym heavy_check_mark not found.
+2023-01-06 11:55:42.083 Keysym heavy_ballot_x not found.

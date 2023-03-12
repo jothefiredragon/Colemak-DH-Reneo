@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ReNeo README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="docs/gh-pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="reneo-die-neo-tastaturlayouts-für-windows">ReNeo – Die Neo-Tastaturlayouts für Windows</h1>
+<p><a href="README_EN.md"><strong>Click here for English</strong></a></p>
+<p>ReNeo implementiert das <a href="http://neo-layout.org/">Neo-Tastaturlayout</a> und seine Verwandten für Windows. Dabei kann man sich für eine von zwei Varianten entscheiden: 1. Im <em>Standalone-Modus</em> ersetzt ReNeo alle Tastendrücke des nativen Layouts (meistens QWERTZ) durch das gewünschte Neo-Layout. Dafür muss zum Systemstart nur die ReNeo-EXE ausgeführt werden. 2. Im <em>Erweiterungsmodus</em> installiert man einen nativen Neo-Treiber wie <a href="https://neo-layout.org/Einrichtung/kbdneo/">kbdneo</a>. ReNeo ergänzt dann alle Funktionen, die nativ nicht umsetzbar sind (Capslock, Steuertasten auf Ebene 4, Compose, …).</p>
+<figure>
+<img src="docs/osk_screenshot.png" title="ReNeo Bildschirmtastatur" alt="ReNeo Bildschirmtastatur Ebene 1" /><figcaption aria-hidden="true">ReNeo Bildschirmtastatur Ebene 1</figcaption>
+</figure>
+<h2 id="installation">Installation</h2>
+<ol type="1">
+<li><em>Optional</em>: <a href="https://neo-layout.org/Einrichtung/kbdneo/">kbdneo</a> normal installieren</li>
+<li><a href="https://github.com/Rojetto/ReNeo/releases/latest">Neuesten ReNeo-Release</a> herunterladen und in ein Verzeichnis mit Schreibrechten entpacken (z. B. <code>C:\Users\[USER]\ReNeo</code>)</li>
+<li><code>reneo.exe</code> starten oder <a href="docs/autostart.md">zu Autostart hinzufügen</a>. Über das Trayicon kann das Programm deaktiviert und beendet werden.</li>
+<li><em>Optional</em>: <a href="#Allgemeine-Konfiguration"><code>config.json</code> anpassen</a> (wird beim ersten Start generiert)</li>
+</ol>
+<p><em>Update</em></p>
+<p>Neuen Release herunterladen und vorhandene Dateien mit den neuen überschreiben. Da <code>config.json</code> nicht im Release enthalten ist, bleiben Nutzereinstellungen erhalten.</p>
+<p><em>Deinstallation</em></p>
+<ol type="1">
+<li><em>Optional</em>: kbdneo nach Wiki-Anleitung deinstallieren</li>
+<li>ReNeo-Verzeichnis löschen und aus Autostart entfernen</li>
+</ol>
+<h2 id="funktionen">Funktionen</h2>
+<p>Allgemein:</p>
+<ul>
+<li>Unterstützt die Layouts <em>Neo</em>, <em>Bone</em>, <em>NeoQwertz</em>, <em>Mine</em>, <em>AdNW</em>, <em>KOY</em>, <a href="https://github.com/jackrosenthal/threelayout"><em>3l</em></a></li>
+<li>Im Traymenü kann zwischen Layouts gewechselt werden</li>
+<li>Capslock (beide Shift-Tasten) und Mod4-Lock (beide Mod4-Tasten)</li>
+<li><strong>Bildschirmtastatur</strong>: Wird über Tray-Menü ein- und ausgeschaltet oder per Shortcut <code>M3+F1</code>. Wechselt zwischen Ebenen, wenn Modifier gedrückt werden.</li>
+<li><em>Alle</em> tote Tasten und Compose-Kombinationen. Diese sind auch durch den Nutzer erweiterbar, alle <code>.module</code>-Dateien im Verzeichnis <code>compose/</code> werden beim Start geladen.</li>
+<li>Spezial-Compose-Sequenzen
+<ul>
+<li>Unicode-Eingabe: <code>♫uu[codepoint hex]&lt;space&gt;</code> fügt Unicode-Zeichen ein. Beispiel: <code>♫uu1f574&lt;space&gt;</code> → 🕴</li>
+<li>Römische Zahlen: <code>♫rn[zahl]&lt;space&gt;</code> für kleine Zahlen, <code>♫RN[zahl]&lt;space&gt;</code> für große Zahlen zwischen 1 und 3999. Beispiel: <code>♫rn1970&lt;space&gt;</code> → ⅿⅽⅿⅼⅹⅹ, <code>♫RN1970&lt;space&gt;</code> → ⅯⅭⅯⅬⅩⅩ</li>
+</ul></li>
+<li><code>Shift+Pause</code> (de)aktiviert die Anwendung</li>
+<li>Einhandmodus: Wenn Modus aktiv ist und Leertaste (Standard) gehalten wird, wird die gesamte Tastatur „gespiegelt“. Umschalten über Tray-Menü oder per Shortcut <code>M3+F10</code>.</li>
+<li>Weitere Layouts können in <code>layouts.json</code> hinzugefügt und angepasst werden</li>
+</ul>
+<p>Als Erweiterung zum nativen Treiber:</p>
+<ul>
+<li>Steuertasten auf Ebene 4</li>
+<li>Wird das native Layout als Neo-verwandt erkannt (<code>kbdneo.dll</code>, <code>kbdbone.dll</code>, <code>kbdgr2.dll</code>), schaltet ReNeo automatisch in den Erweiterungs-Modus. Umschalten zwischen Layouts ist ganz normal möglich.</li>
+<li>Verbesserte Kompatibilität mit Qt- und GTK-Anwendungen. Workaround für <a href="https://git.neo-layout.org/neo/neo-layout/issues/510">diesen Bug</a>.</li>
+<li>Compose-Taste <code>M3+Tab</code> sendet keinen Tab mehr an Anwendung. Workaround für <a href="https://git.neo-layout.org/neo/neo-layout/issues/397">diesen Bug</a>.</li>
+</ul>
+<h2 id="konfiguration">Konfiguration</h2>
+<p>ReNeo kann mit zwei Konfigurationsdateien angepasst werden.</p>
+<h3 id="allgemeine-konfiguration">Allgemeine Konfiguration</h3>
+<p><code>config.json</code> hat folgende Optionen:</p>
+<ul>
+<li><code>"standaloneMode"</code>:
+<ul>
+<li><code>true</code> (Standard): Das native Layout (z. B. QWERTZ) wird von ReNeo mit dem ausgewählten Neo-Layout ersetzt. Hinweis: ist das native Layout bereits Neo-verwandt, verändert ReNeo das Layout nicht und schaltet stattdessen automatisch in den Erweiterungsmodus.</li>
+<li><code>false</code>: Ist das native Layout Neo-verwandt, schaltet ReNeo in den Erweiterungsmodus. Bei allen anderen Layouts deaktiviert sich ReNeo automatisch.</li>
+</ul></li>
+<li><code>"standaloneLayout"</code>: Layout, das für den Standalone-Modus genutzt werden soll. Auch übers Traymenü auswählbar.</li>
+<li><code>"language"</code>: Programmsprache, <code>"german"</code> oder <code>"english"</code>.</li>
+<li><code>"osk"</code>:
+<ul>
+<li><code>"numpad"</code>: Soll Numpad in Bildschirmtastatur angezeigt werden?</li>
+<li><code>"numberRow"</code>: Soll die Zahlenreihe angezeigt werden?</li>
+<li><code>"theme"</code>: Farbschema für Bildschirmtastatur. Mögliche Werte: <code>"Grey"</code>, <code>"NeoBlue"</code></li>
+<li><code>"layout"</code>: <code>"iso"</code> oder <code>"ansi"</code></li>
+<li><code>"modifierNames"</code>: <code>"standard"</code> (M3, M4, …) oder <code>"three"</code> (Sym, Cur)</li>
+</ul></li>
+<li><code>"hotkeys"</code>: Hotkeys für verschiedene Funktionen. Beispiel: <code>"Ctrl+Alt+F5"</code> oder <code>"Shift+Alt+Key_A"</code>. Erlaubte Modifier sind <code>Shift</code>, <code>Ctrl</code>, <code>Alt</code>, <code>Win</code>. Die Haupttaste ist ein beliebiger VK aus <a href="https://github.com/Rojetto/ReNeo/blob/5bd304a7c42c768ed45813095ab5fbc69103773c/source/mapping.d#L17">dieser Enum</a>, die auf der <a href="https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Win32-Doku</a> basiert. Ist ein Wert <code>null</code>, wird kein globaler Hotkey angelegt.
+<ul>
+<li><code>"toggleActivation"</code>: ReNeo aktivieren/deaktivieren</li>
+<li><code>"toggleOSK"</code>: Bildschirmtastatur öffnen/schließen. Zusätzlich zu dem hier konfigurierten Hotkey funktioniert immer <code>M3+F1</code>.</li>
+<li><code>"toggleOneHandedMode"</code>: Einhandmodus (de)aktivieren. Zusätzlich funktioniert immer <code>M3+F10</code>.</li>
+</ul></li>
+<li><code>"blacklist"</code>: Liste von Programmen, für die ReNeo automatisch deaktiviert werden soll (zum Beispiel X-Server, Remote-Clients oder Spiele, bei denen es sonst Konflikte gibt). Momentan wird nach dem Fenstertitel entschieden, für den man eine <em>RegEx</em> definieren kann. <em>Beispiel</em>: Für Fenster, die “emacs” oder “Virtual Machine Manager” im Titel enthalten, soll ReNeo sich deaktivieren. Die Config enthält dann</li>
+</ul>
+<pre><code>&quot;blacklist&quot;: [
+    {
+        &quot;windowTitle&quot;: &quot;emacs&quot;
+    },
+    {
+        &quot;windowTitle&quot;: &quot;Virtual Machine Manager&quot;
+    }
+]</code></pre>
+<ul>
+<li><code>"autoNumlock"</code>: Soll Numlock automatisch angeschaltet werden? Wenn die Tastatur einen echten Nummernblock besitzt, sollte diese Option für beste Kompatibilität immer auf <code>true</code> gesetzt sein. Bei Laptops mit nativer Numpad-Ebene auf dem Hauptfeld kann dieses Verhalten aber mit <code>false</code> deaktiviert werden.</li>
+<li><code>"filterNeoModifiers"</code>:
+<ul>
+<li><code>true</code> (Standard): Die Tastenevents für M3 und M4 werden im Erweiterungsmodus von ReNeo weggefiltert, Anwendungen bekommen von diesen Tasten also nichts mit. Workaround für <a href="https://git.neo-layout.org/neo/neo-layout/issues/510">diesen Bug</a>.</li>
+<li><code>false</code>: Anwendungen sehen M3/M4. Notwendig, wenn man in den Anwendungen mit diesen Tasten Optionen verknüpfen will.</li>
+</ul></li>
+<li><code>"oneHandedMode"</code>:
+<ul>
+<li>“<code>mirrorKey"</code>: Scancode der Taste zum Spiegeln, standardmäßig ist die Leertaste (<code>44</code>) eingestellt.</li>
+<li>“<code>mirrorMap"</code>: Zuordnung der gespiegelten Tasten nach Scancode in der Form <code>"[Originaltaste]": "[Spiegeltaste]"</code>. Muss für ergonomische oder Matrixtastaturen evtl. angepasst werden.</li>
+</ul></li>
+</ul>
+<h3 id="layouts-anpassen">Layouts anpassen</h3>
+<p>In <code>layouts.json</code> können Layouts angepasst und hinzugefügt werden. Jeder Eintrag besitzt folgende Parameter:</p>
+<ul>
+<li><code>"name"</code>: Name des Layouts, so wie er im Menü angezeigt wird.</li>
+<li><code>"dllName"</code> (Optional): Name der zugehörigen nativen Treiber-DLL. Existiert diese nicht, kann der Parameter weggelassen werden.</li>
+<li><code>"modifiers"</code>: Scancodes aller Modifier, auch alle nativen Modifier müssen hier gemappt werden. Mit <code>+</code> am Ende des Scancodes wird das Extended-Bit gesetzt, zum Beispiel <code>36+</code> für die rechte Shift-Taste. Mögliche Modifier sind <code>LShift</code>, <code>LCtrl</code>, <code>LAlt</code>, <code>LMod3</code>, <code>LMod4</code> (jeweils auch rechte Variante) sowie weitere Mod-Tasten <code>Mod5</code> bis <code>Mod9</code>.</li>
+<li><code>"layers"</code>: Modifier-Kombinationen für jede Ebene. Die Ebenen werden zur Laufzeit nacheinander getestet und die erste Ebene übernommen, deren Modifier die spezifizierten Werte haben.</li>
+<li><code>"capslockableKeys"</code>: Array von Scancodes, die von Capslock beeinflusst werden sollen. Typischerweise sind das alle Buchstaben, inklusive „äöüß“.</li>
+<li><code>"map"</code>: Das tatsächliche Layout in Form von Arrays für jeden Scancode. Jeder Eintrag enthält so viele Einträge, wie Ebenen in <code>"layers"</code> definiert wurden, mit folgendem Inhalt:
+<ul>
+<li><code>"keysym"</code>: X11-Keysym der Taste, entweder aus <code>keysymdef.h</code> oder in der Form <code>U1234</code> für Unicode-Zeichen. Wird für Compose benutzt.</li>
+<li><strong>Entweder</strong> <code>"vk"</code>: Windows Virtual Key aus dem Enum <code>VKEY</code> in <code>mapping.d</code>. Nur genutzt für Steuertasten.</li>
+<li><strong>Oder</strong> <code>"char"</code>: Unicode-Zeichen, das mit der Taste erzeugt werden soll.</li>
+<li><code>"label"</code>: (Optional) Beschriftung für Bildschirmtastatur. Als Fallback wird der Wert von <code>"char"</code> genutzt.</li>
+<li><code>"mods"</code>: (Optional, nur für VK-Mappings) Modifier, die gedrückt (<code>true</code>) oder losgelassen (<code>false</code>) werden sollen. Beispiel: <code>"mods": {"LCtrl": true, "LAlt": true}</code>. Mögliche Modifier sind <code>LShift</code>, <code>RShift</code>, <code>LCtrl</code>, <code>RCtrl</code>, <code>LAlt</code>.</li>
+</ul></li>
+</ul>
+<p>Zum Erstellen neuer Layouts hat sich folgender Arbeitsablauf bewährt:</p>
+<ol type="1">
+<li>Bestehendes Layout kopieren und neuen Namen eintragen</li>
+<li>Die Zeilen der Buchstabentasten (also ab Scancode <code>0C</code>) neu ordnen, sodass diese auf der Tastatur von oben links nach unten rechts gelesen in der richtigen Reihenfolge sind.</li>
+<li>Mit Blockauswahl die Scancodes eines bestehenden Layouts kopieren, und die (jetzt falsch geordneten) Scancodes des neuen Layouts überschreiben.</li>
+<li>Mit Blockauswahl Ebenen 3 und 4 eines bestehenden Layouts kopieren, und Ebenen 3 und 4 des neuen Layouts überschreiben.</li>
+<li><code>modifiers</code> und <code>capslockableKeys</code> ggf. anpassen</li>
+</ol>
+<p>So bleiben Ebenen 3 und 4 an der richtigen Stelle, und die anderen Ebenen werden nach der neuen Buchstabenanordnung permutiert.</p>
+<p>Folgende Regex kann beim Ausrichten der Spalten helfen: <code>"[\dA-Fa-f]+\+?": *\[(\{.*?\}, *){5}\{</code></p>
+<h1 id="virtuelle-maschinen-und-remote-desktop">Virtuelle Maschinen und Remote Desktop</h1>
+<p>Sobald mehrere „ineinander“ laufende Betriebssysteme ins Spiel kommen, wird es mit alternativen Tastaturlayouts fast immer haarig. Da sich die verschiedenen VM-Programme und Remote Desktop Clients unterschiedlich verhalten, gibt es leider keine universelle Lösung, sondern nur eine grundsätzliche Empfehlung und ein paar erprobte Konfigurationen.</p>
+<p>Für beste Kompatibilität sollte im Allgemeinen das <em>innerste</em> System das Alternativlayout übernehmen, und in allen äußeren Systeme QWERTZ eingestellt sein. Bei VMs bedeutet das QWERTZ im Wirt und den passenden Neo-Treiber im Gast. Im Fall von Remote-Desktop-Verbindungen heißt es QWERTZ lokal und einen Neo-Treiber im Remote-System.</p>
+<p>Wenn sich herausstellt, dass es ohne ReNeo besser funktioniert, können die entsprechenden Programme auch auf die <em>Blacklist</em> gesetzt werden, sodass sich ReNeo automatisch deaktiviert. Siehe dazu <a href="#allgemeine-konfiguration">Konfiguration</a>.</p>
+<h2 id="wsl-mit-vcxsrv-als-x-server">WSL mit VcXsrv als X-Server</h2>
+<p>In Windows QWERTZ (ohne ReNeo), dann das Neo-Layout in X11 einstellen. Für Neo lautet der Befehl <code>setxkbmap de neo</code>, für andere Layouts muss eventuell noch eine passende xkbmap installiert werden.</p>
+<h2 id="virtualbox">VirtualBox</h2>
+<p>Im Wirtsystem QWERTZ einstellen, dann Neo-Treiber (z. B. ReNeo) im Gastsystem installieren.</p>
+<h2 id="remote-desktop-manager"><a href="https://remotedesktopmanager.com/">Remote Desktop Manager</a></h2>
+<p>Es geht offenbar auch ReNeo im Standalone-Modus auf dem lokalen System mit QWERTZ auf dem Remote-System. Zumindest Buchstaben und (nicht-Unicode)-Sonderzeichen werden dann auf die Remote-Systeme korrekt weitergeleitet.</p>
+<h1 id="für-entwickler">Für Entwickler</h1>
+<h2 id="kompilieren">Kompilieren</h2>
+<p>ReNeo ist in D geschrieben und nutzt <code>dub</code> für Projektkonfiguration und Kompilation. Es gibt drei wichtige Kompilationsvarianten:</p>
+<ol type="1">
+<li>Debug mit <code>dub build</code>: Neben Debuggingsymbolen öffnet die generierte EXE eine Konsole um Informationen ausgeben zu können.</li>
+<li>Debug und Log mit <code>dub build --build=debug-log</code>: Wie debug, nur dass zusätzlich in <code>reneo_log.txt</code> alle Konsolenausgaben abgespeichert werden. Achtung: Hier können potentiell sensible Daten landen.</li>
+<li>Release mit <code>dub build --build=release</code>: Optimierungen sind aktiviert und es wird keine Konsole geöffnet.</li>
+</ol>
+<p>Die Ressourcendatei <code>res/reneo.res</code> wird mit <code>rc.exe</code> aus dem Windows SDK erstellt (x86-Version, die generierte res-Datei funktioniert sonst nicht). Dazu reicht der Befehl <code>rc.exe reneo.rc</code>.</p>
+<p>Cairo-DLL stammt von https://github.com/preshing/cairo-windows. Die zugehörigen D-Header wurden mit <a href="https://github.com/jacob-carlborg/dstep">DStep</a> aus den C-Headern generiert und manuell angepasst.</p>
+<h2 id="release">Release</h2>
+<p>Wenn ein Tag nach dem Schema <code>v*</code> im Repo ankommt, löst eine GitHub Action den Release aus. Auf Basis der <code>config.[layout].json</code> Dateien werden verschiedene vorkonfigurierte ZIP-Archive erstellt und ein Release-Draft angelegt. Der kann dann manuell bearbeitet und freigeschaltet werden.</p>
+<h1 id="bibliotheken">Bibliotheken</h1>
+<p>Nutzt <a href="https://www.cairographics.org/">Cairo</a>, lizensiert unter der GNU Lesser General Public License (LGPL) Version 2.1.</p>
+</body>
+</html>
