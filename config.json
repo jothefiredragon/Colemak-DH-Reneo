@@ -63,6 +63,6 @@
         "numpad": true,
         "theme": "Grey"
     },
-    "standaloneLayout": "Colemak_DH",
+    "standaloneLayout": "Semimak_WITH_native_layout",
     "standaloneMode": true
 }
