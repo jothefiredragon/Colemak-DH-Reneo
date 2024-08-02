@@ -1,5 +1,5 @@
 //This is the 1st line of Linux/de_snippet_colemak_dh_infinity which corresponds to the 306th line of Linux/de
-//last updated: 2024-04-27 11:32
+//last updated: 2024-08-02 13:54
 partial alphanumeric_keys modifier_keys keypad_keys
 xkb_symbols "neo_base" {
 
@@ -84,9 +84,9 @@ xkb_symbols "neo_base" {
     key <AC07> { [ n,                       N,                       parenleft,               Greek_nu,                KP_4,                    U2463,                   U2115,                   NoSymbol                 ] };
     key <AC08> { [ e,                       E,                       parenright,              Greek_epsilon,           KP_5,                    U2464,                   U2203,                   NoSymbol                 ] };
     key <AC09> { [ i,                       I,                       colon,                   Greek_iota,              KP_6,                    U2465,                   integral,                NoSymbol                 ] };
-    key <AC10> { [ o,                       O,                       semicolon,               Greek_omicron,           period,                  KP_Decimal,              elementof,               NoSymbol                 ] };
+    key <AC10> { [ o,                       O,                       semicolon,               Greek_omicron,           colon,                   KP_Decimal,              elementof,               NoSymbol                 ] };
     key.type[Group1] = "EIGHT_LEVEL_LEVEL_FIVE_LOCK";
-    key <AC11> { [ minus,                   underscore,              percent,                 U205E,                   colon,                   U2055,                   union,                   NoSymbol                 ] };
+    key <AC11> { [ minus,                   underscore,              percent,                 U205E,                   U2318,                   U2055,                   union,                   NoSymbol                 ] };
 
     // Bottom row
     // --------------------------------------------------------------
