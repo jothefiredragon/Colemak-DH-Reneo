@@ -59,8 +59,8 @@ xkb_symbols "neo_base" {
     key <AD01> { [ q,                       Q,                       variation,               U03D5,                   Prior,                   Prior,                   U211A,                   NoSymbol                 ] };
     key <AD02> { [ w,                       W,                       U221E,                   Greek_omega,             BackSpace,               BackSpace,               Greek_OMEGA,             NoSymbol                 ] };
     key <AD03> { [ f,                       F,                       bracketleft,             Greek_phi,               Up,                      Up,                      Greek_PHI,               NoSymbol                 ] };
-    key <AD04> { [ p,                       P,                       bracketright,            Greek_pi,                Delete,                  Delete,                  Greek_PI,                NoSymbol                 ] };
-    key <AD05> { [ b,                       B,                       U0E3F,                   Greek_beta,              Next,                    Next,                    U21D0,                   NoSymbol                 ] };
+    key <AD04> { [ p,                       P,                       bracketright,            U0E3F,                   Delete,                  Delete,                  Greek_PI,                NoSymbol                 ] };
+    key <AD05> { [ b,                       B,                       Greek_pi,                Greek_beta,              Next,                    Next,                    U21D0,                   NoSymbol                 ] };
    
     key <AD06> { [ j,                       J,                       leftarrow,               Greek_theta,             U2113,                   NoSymbol,                Greek_THETA,             NoSymbol                 ] };
     key <AD07> { [ l,                       L,                       uparrow,                 Greek_lambda,            KP_7,                    U2466,                   Greek_LAMBDA,            NoSymbol                 ] };
